@@ -14,10 +14,10 @@ const Page = () => {
   return (
     <Body>
       <BoxContainer>
-        <h1 className="text-xl font-semibold border-b-2 border-slate-700 w-fit text-sky-500">
+        <h1 className="text-xl font-semibold border-b-2 border-slate-300 w-fit text-sky-500 dark:border-slate-700">
           About
         </h1>
-        <p className="my-8 text-sm text-slate-300">
+        <p className="my-8 text-sm text-slate-700 dark:text-slate-300">
           WIBUNIME is an anime list website that I created using NextJS with API
           from{" "}
           <Link href={"https://jikan.moe/"} className="hover:text-sky-500">
@@ -25,8 +25,8 @@ const Page = () => {
           </Link>
         </p>
         <div className="about-me">
-          <h2 className="text-white">About Me</h2>
-          <p className="text-sm text-slate-300">
+          <h2 className="text-black dark:text-white">About Me</h2>
+          <p className="text-sm text-slate-700 dark:text-slate-300">
             Hello everyone, my name is Juli, I live in a small village in Bali.
             I started to love the world of coding since I was in high school, at
             that time I managed to create a simple web that displays the words
@@ -35,8 +35,8 @@ const Page = () => {
             Nice to meet you!
           </p>
         </div>
-        <div className="socmed my-4 text-slate-300">
-          <h2 className="text-white">Follow me</h2>
+        <div className="socmed my-4 text-slate-700 dark:text-slate-300">
+          <h2 className="text-black dark:text-white">Follow me</h2>
           <Link
             target="_blank"
             href={"https://www.instagram.com/juliasta._"}

@@ -36,24 +36,24 @@ const Search = () => {
 
   return (
     <div>
-      <div className="search text-white lg:hidden">
+      <div className="search text-black lg:hidden dark:text-white">
         <MagnifyingGlass size={32} onClick={handleClick} />
       </div>
       <div
         className={`px-2 absolute w-full left-0 ${scaled} transition-all duration-300 ease-in-out origin-top-right z-10 lg:scale-100 lg:flex lg:items-center lg:relative`}
       >
-        <div className="bg-slate-800 rounded-lg">
+        <div className="bg-slate-300   dark:bg-slate-800 rounded-lg">
           <form action="" className=" flex items-center w-full p-2 gap-2 ">
             <input
               type="text"
               placeholder="search.."
-              className="w-full bg-slate-800 outline-none text-white"
+              className="w-full outline-none bg-slate-300 text-slate-800 dark:text-white dark:bg-slate-800"
               ref={inputRef}
             />
             <select
               name=""
               id=""
-              className="bg-slate-800 outline-none text-slate-300"
+              className=" outline-none bg-slate-300 text-slate-700 dark:text-slate-300 dark:bg-slate-800"
               ref={selectRef}
             >
               <option value="anime">Anime</option>
@@ -64,7 +64,10 @@ const Search = () => {
               className="text-slate-300"
               onClick={handleSearch}
             >
-              <MagnifyingGlass size={20} />
+              <MagnifyingGlass
+                size={20}
+                className="text-slate-700 dark:text-slate-300"
+              />
             </button>
           </form>
         </div>

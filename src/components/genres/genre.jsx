@@ -8,7 +8,7 @@ const Genre = ({ api, href }) => {
           <Link
             key={genre.mal_id}
             href={`genres/${href}/${genre.mal_id}/${genre.name}`}
-            className="text-slate-400 text-sm hover:text-sky-500"
+            className="text-slate-800 text-sm hover:text-sky-500 dark:text-slate-400"
           >
             {genre.name}
           </Link>

@@ -13,14 +13,15 @@ const List = ({ api, href }) => {
   ];
 
   return (
-    <div>
+    <div className="mb-8">
       {api?.length != 0 ? (
         <div className="grid grid-cols-2 gap-4 lg:grid-cols-5">
-          {api?.map((data) => {
+          {api?.map((data, index) => {
             return (
               <Link
-                key={data.mal_id}
+                key={index}
                 href={`/${href}/${data.mal_id}/${data.title}`}
+                className="shadow-lg"
               >
                 <div className="card flex flex-col  w-full h-full">
                   <div className="image w-full h-full">
@@ -32,7 +33,7 @@ const List = ({ api, href }) => {
                       priority={true}
                     />
                   </div>
-                  <div className="title w-full h-8 text-slate-300">
+                  <div className="title w-full h-8 text-slate-700 dark:text-slate-300">
                     <div>
                       <p className="whitespace-nowrap text-ellipsis overflow-x-hidden">
                         {data.title}{" "}
@@ -55,11 +56,15 @@ const List = ({ api, href }) => {
                       </div>
                     ) : (
                       <div>
-                        <p className="text-slate-300 text-sm">No rating</p>
+                        <p className="text-slate-700 text-sm dark:text-slate-300">
+                          No rating
+                        </p>
                       </div>
                     )}
 
-                    <p className="text-slate-300 text-sm">{data.score}</p>
+                    <p className="text-slate-700 text-sm dark:text-slate-300">
+                      {data.score}
+                    </p>
                   </div>
                 </div>
               </Link>

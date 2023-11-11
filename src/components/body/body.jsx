@@ -5,7 +5,7 @@ import Footer from "../footer/footer";
 const Body = ({ children, resource }) => {
   return (
     <div className="w-full ">
-      <div className="w-[95%] m-auto bg-black flex flex-col pt-8 p-2 lg:w-[90%] lg:flex-row lg:gap-8  xl:w-[75%] ">
+      <div className="w-[95%] m-auto bg-slate-200 flex flex-col pt-8 p-2 lg:w-[90%] lg:flex-row lg:gap-8  xl:w-[75%] dark:bg-black">
         <div className="w-full lg:w-3/4">
           <div>{children}</div>
           <div>

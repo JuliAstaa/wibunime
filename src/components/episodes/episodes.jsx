@@ -13,9 +13,9 @@ const Episodes = async ({ mal_id }) => {
             return (
               <ul
                 key={episode.mal_id}
-                className="border-b-2 border-slate-800 py-2 flex text-sm"
+                className="border-b-2 border-slate-300 py-2 flex text-sm dark:border-slate-800"
               >
-                <li className="text-slate-400 flex w-full justify-between items-center">
+                <li className=" text-slate-800 flex w-full justify-between items-center dark:text-slate-400">
                   <div className="episode w-1/2 lg:w-[20%]">
                     <p className="w-full">{episode.episode}</p>
                   </div>
@@ -24,7 +24,7 @@ const Episodes = async ({ mal_id }) => {
                   </div>
                   <div className="title w-1/2 flex justify-end lg:w-[15%] lg:justify-center">
                     <Link
-                      className="p-2 bg-slate-700 rounded-lg hover:text-white hover:bg-sky-500"
+                      className="p-2 rounded-lg bg-slate-300 hover:text-white hover:bg-sky-500 dark:bg-slate-700 "
                       href={episode.url}
                     >
                       {" "}
@@ -38,7 +38,7 @@ const Episodes = async ({ mal_id }) => {
         </div>
       ) : (
         <div className="w-full h-full flex justify-start items-center mt-8">
-          <h1 className="text-slate-300 font-semibold text-sm">
+          <h1 className="text-slate-700  font-semibold text-sm dark:text-slate-300">
             {"Episode is not available:( "}
           </h1>
         </div>

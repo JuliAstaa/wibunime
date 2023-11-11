@@ -14,7 +14,7 @@ const Detail = ({ children, data }) => {
     <div>
       <div className="detail">
         <div className="header flex flex-col justify-between items-start gap-2 lg:flex-row lg:gap-8 lg:items-center">
-          <h1 className="font-semibold text-white border-b-[1px] w-fit">
+          <h1 className="font-semibold text-black border-b-[1px] w-fit dark:text-white">
             {data.title} {data.title_japanese}
           </h1>
           <div className="rating">
@@ -33,11 +33,15 @@ const Detail = ({ children, data }) => {
                 </div>
               ) : (
                 <div>
-                  <p className="text-slate-300 text-sm">No rating</p>
+                  <p className="text-slate-700 dark:text-slate-300 text-sm">
+                    No rating
+                  </p>
                 </div>
               )}
 
-              <p className="text-slate-300 text-sm">{data.score}</p>
+              <p className="text-slate-700 dark:text-slate-300 text-sm">
+                {data.score}
+              </p>
             </div>
           </div>
         </div>
@@ -52,7 +56,7 @@ const Detail = ({ children, data }) => {
             />
           </div>
           <div className="synopsis col-span-2 mt-4 lg:mt-0">
-            <p className="text-sm text-slate-400 text-justify lg:text-start">
+            <p className="text-sm text-slate-700 text-justify lg:text-start dark:text-slate-300">
               {data.synopsis ? data.synopsis : "No sypnosis yet"}
             </p>
           </div>

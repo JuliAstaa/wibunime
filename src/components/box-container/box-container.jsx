@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { CaretDoubleRight } from "@phosphor-icons/react/dist/ssr";
+
 const BoxContainer = ({ title, href, children }) => {
   return (
     <div>
@@ -9,8 +11,13 @@ const BoxContainer = ({ title, href, children }) => {
           </h1>
         </div>
         {href ? (
-          <div className="more text-slate-300 hover:text-sky-500">
-            <Link href={href}>More {">>"}</Link>
+          <div className="more text-slate-300  ">
+            <Link
+              href={href}
+              className="flex items-center gap-1 hover:text-sky-500 text-slate-800 dark:text-slate-200"
+            >
+              More <CaretDoubleRight size={20} weight="bold" />
+            </Link>
           </div>
         ) : null}
       </div>
