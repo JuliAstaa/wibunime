@@ -18,7 +18,7 @@ const Footer = () => {
         </div>
         <div className="h-[1px] w-full  my-6 bg-slate-300 dark:bg-slate-800"></div>
         <div className="title flex justify-center">
-          <p className="text-slate-400">
+          <p className="text-slate-400 text-center">
             Copyright © WIBUNIME. All right reserved
           </p>
         </div>

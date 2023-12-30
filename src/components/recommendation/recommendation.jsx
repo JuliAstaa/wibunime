@@ -1,6 +1,6 @@
 import { FecthingNestedData, RandomData } from "@/libs/api-libs";
 import BoxContainer from "../box-container/box-container";
-import List from "../list/list";
+import ListRecommendation from "../list/listRecomendation";
 
 const Recommendation = async ({ resource }) => {
   if (resource) {
@@ -13,7 +13,7 @@ const Recommendation = async ({ resource }) => {
     return (
       <div className="mt-8">
         <BoxContainer title={`Recommended ${resource}`}>
-          <List api={recommendations.data} href={resource} />
+          <ListRecommendation api={recommendations.data} href={resource} />
         </BoxContainer>
       </div>
     );
